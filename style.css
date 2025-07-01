@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin: 0;
+}
+header .info {
+  text-align: right;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  animation: fadeIn 1.5s ease-in;
+  background-size: cover;
+  background-position: center;
+  animation: heroBackground 15s infinite;
+}
+.hero h2 {
+  font-size: 3rem;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.about {
+  padding: 60px 10%;
+  text-align: center;
+  animation: slideUp 1s ease-in;
+}
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+}
+.project:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.project img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.project .text {
+  width: 55%;
+}
+.project h4 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 0;
+}
+.project p {
+  margin-bottom: 0;
+}
+
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 40px 10%;
+  font-size: 0.9rem;
+}
+a {
+  color: #b28a4c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(1.05);}
+  to {opacity: 1; transform: scale(1);}
+}
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes heroBackground {
+  0%, 25% {
+    background-image: url('Łazienka_01.jpg');
+  }
+  25%, 50% {
+    background-image: url('Łazienka_02.jpg');
+  }
+  50%, 75% {
+    background-image: url('Łazienka_03.jpg');
+  }
+  75%, 100% {
+    background-image: url('Łazienka_04.jpg');
+  }
+}
+
+@media(max-width: 768px) {
+  header, .about, footer {
+    padding: 20px;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  header .info {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .project {
+    flex-direction: column;
+  }
+  .project img,
+  .project .text {
+    width: 100%;
+  }
+}
