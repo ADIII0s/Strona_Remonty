@@ -3,148 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Remonty Premium - Poznań</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      color: #222;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin: 0;
-    }
-    header .info {
-      text-align: right;
-    }
-    section.hero {
-      background-image: url('https://source.unsplash.com/1600x900/?interior,apartment');
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
-      animation: fadeIn 1.5s ease-in;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    section.about {
-      padding: 60px 10%;
-      text-align: center;
-      animation: slideUp 1s ease-in;
-    }
-    .about h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .stat {
-      margin: 20px;
-    }
-    .stat h4 {
-      font-size: 2rem;
-      color: #b28a4c;
-    }
-    footer {
-      background: #222;
-      color: #eee;
-      text-align: center;
-      padding: 40px 10%;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #b28a4c;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: scale(1.05);}
-      to {opacity: 1; transform: scale(1);}
-    }
-    @keyframes slideUp {
-      from {opacity: 0; transform: translateY(50px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @media(max-width: 768px) {
-      header, section.about, footer {
-        padding: 20px;
-      }
-      .hero h2 {
-        font-size: 2rem;
-      }
-      .stats {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <title>RPP: Remonty premium Poznań</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Remonty Premium</h1>
+    <h1>RPP – Remonty Premium</h1>
     <div class="info">
-      <p>Poznań i okolice</p>
-      <p>+48 123 456 789</p>
+      <p>Poznań</p>
+      <p>Tel: 123&nbsp;456&nbsp;789</p>
     </div>
   </header>
 
   <section class="hero">
-    <h2>Wnętrza z charakterem</h2>
+    <h2>Wnętrza najwyższej jakości</h2>
   </section>
 
-  <section class="about">
-    <h3>O nas</h3>
-    <p>Specjalizujemy się w kompleksowych remontach i wykończeniach wnętrz klasy premium. Łączymy precyzję wykonania z eleganckim stylem, tworząc przestrzenie, które inspirują.</p>
-    <div class="stats">
-      <div class="stat">
-        <h4>10+</h4>
-        <p>lat na rynku</p>
+    <section class="about animate">
+      <h3>O nas</h3>
+    <p>Firma istnieje na rynku od ponad dziesięciu lat i przez ten czas zrealizowaliśmy setki projektów w Poznaniu oraz okolicach. Nasza ekipa łączy doświadczenie z pasją do tworzenia pięknych i funkcjonalnych wnętrz. Współpracujemy z najlepszymi dostawcami materiałów, co gwarantuje trwałość oraz elegancję każdego wykończenia. Zachęcamy do śledzenia naszego Instagrama, gdzie regularnie publikujemy zdjęcia z bieżących realizacji i pokazujemy nowe inspiracje.</p>
+    </section>
+
+    <section class="project animate">
+      <img src="Łazienka_01.jpg" alt="Kawalerka – Grunwald" />
+      <div class="text">
+        <h4>Kawalerka – Grunwald</h4>
+        <p>Kompleksowy remont łazienki i kuchni. Jasne kafle, czarne akcenty,
+          prysznic bez brodzika, lustro LED oraz zabudowa na wymiar.</p>
       </div>
-      <div class="stat">
-        <h4>350+</h4>
-        <p>zadowolonych klientów</p>
+    </section>
+
+    <section class="project animate">
+      <img src="Łazienka_02.jpg" alt="Dom – Dębiec" />
+      <div class="text">
+        <h4>Dom – Dębiec</h4>
+        <p>Dwie łazienki w stylu industrialnym. Beton architektoniczny, armatura
+          podtynkowa, prysznic typu walk-in i wanna wolnostojąca.</p>
       </div>
-      <div class="stat">
-        <h4>120+</h4>
-        <p>ukończonych projektów</p>
+    </section>
+
+    <section class="project animate">
+      <img src="Łazienka_03.jpg" alt="Łazienka – Jeżyce" />
+      <div class="text">
+        <h4>Łazienka – Jeżyce</h4>
+        <p>Eleganckie wykończenie z marmurowym wzorem. Oświetlenie LED,
+          podwieszana szafka, umywalka nablatowa i złote dodatki.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="project animate">
+      <img src="Łazienka_04.jpg" alt="Mieszkanie – Winogrady" />
+      <div class="text">
+        <h4>Mieszkanie – Winogrady</h4>
+        <p>Jasne wykończenie, naturalne drewno, wanna z zabudową, frezowane
+          fronty z MDF i kabina walk-in z czarnym profilem.</p>
+      </div>
+    </section>
+
 
   <footer>
-    <p><strong>Remonty Premium</strong> • ul. Przykładowa 1, Poznań</p>
-    <p>Tel: +48 123 456 789 • <a href="#">Instagram</a></p>
-    <p>&copy; 2025 Wszystkie prawa zastrzeżone</p>
+    <p>Adres: ul. Przykładowa 1, Poznań</p>
+    <p>Tel: 123 456 789 • <a href="#">Instagram</a></p>
   </footer>
 </body>
 </html>
